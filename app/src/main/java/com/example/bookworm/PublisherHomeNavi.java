@@ -26,7 +26,7 @@ public class PublisherHomeNavi extends AppCompatActivity {
 
 
     ListView listview;
-    Button button;
+    //Button button;
     DatabaseReference reference;
     ArrayList<Book_Details> bookArray = new ArrayList<>();
 
