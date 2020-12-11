@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -71,6 +72,7 @@ public class DeleteUpdate extends AppCompatActivity {
                                    snapshot1.getRef().removeValue();
                                    reference.child(String.valueOf(snapshot1.getChildrenCount()));
 
+
                                }
                            }
 
@@ -79,6 +81,7 @@ public class DeleteUpdate extends AppCompatActivity {
 
                            }
                        });
+                        Toast.makeText(DeleteUpdate.this,"Book Details Deleted",Toast.LENGTH_LONG).show();
 
                     }
                 }).setNegativeButton("No",null);
@@ -90,13 +93,9 @@ public class DeleteUpdate extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
     }
+
+
 
     /*public void update (View view){
         if (isBookNameChanged()|| isDiscriptionChanged() || isPriceChanged()){
@@ -140,6 +139,8 @@ public class DeleteUpdate extends AppCompatActivity {
             return false;
         }
     }*/
+
+
 
 
 

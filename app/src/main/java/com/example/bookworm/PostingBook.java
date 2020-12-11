@@ -25,7 +25,7 @@ public class PostingBook extends AppCompatActivity  {
 
     DatabaseReference reference;
     Book_Details bookdetails;
-    long maxid =0;
+    //long maxid =0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +43,8 @@ public class PostingBook extends AppCompatActivity  {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()){
-                    maxid =(snapshot.getChildrenCount());}
+                    //maxid =
+                    snapshot.getChildrenCount();}
 
             }
 
@@ -66,7 +67,7 @@ public class PostingBook extends AppCompatActivity  {
                 bookdetails.setBprice(pric);
 
 
-                reference.child(String.valueOf(maxid+1)).setValue(bookdetails);
+                reference.child(String.valueOf(name)).setValue(bookdetails);
                 Toast.makeText(PostingBook.this,"Book Details Inserted Successfully",Toast.LENGTH_LONG).show();
 
 
