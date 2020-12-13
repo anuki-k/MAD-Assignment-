@@ -31,8 +31,7 @@ public class ContactDetails extends AppCompatActivity {
             public void onClick(View v) {
                 if (!name.getText().toString().isEmpty() && !phone.getText().toString().isEmpty() && !address.getText().toString().isEmpty())
                 {
-                }else {
-                    Toast.makeText(ContactDetails.this, "please fill all the fields", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ContactDetails.this,"please fill all the fields", Toast.LENGTH_SHORT).show();
                 }
             }
         });

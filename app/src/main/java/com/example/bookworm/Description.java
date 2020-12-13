@@ -13,7 +13,7 @@ import com.google.firebase.database.DatabaseReference;
 public class Description extends AppCompatActivity {
 
     TextView bookname,bookdiscription,bookprice;
-    Button btnUpdate,btnDelete;
+    Button oder;
     DatabaseReference reference;
     String name,discrip,pric,userId ;
     Book_Details bookDetails;
