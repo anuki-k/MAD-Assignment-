@@ -15,7 +15,7 @@ public class Description extends AppCompatActivity {
     TextView bookname,bookdiscription,bookprice;
     Button oder;
     DatabaseReference reference;
-    String name,discrip,pric,userId ;
+    String name,discrip,price,userId ;
     Book_Details bookDetails;
     //testing github
 
@@ -33,7 +33,7 @@ public class Description extends AppCompatActivity {
         bookname.setText(name);
         discrip = book.getDescription();
         bookdiscription.setText(discrip);
-        pric = book.getPrice();
-        bookprice.setText(pric);
+        price = book.getPrice();
+        bookprice.setText(price);
     }
 }
