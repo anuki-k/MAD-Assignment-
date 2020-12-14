@@ -14,9 +14,7 @@ public class Description extends AppCompatActivity {
 
     TextView bookname,bookdiscription,bookprice;
     Button oder;
-    DatabaseReference reference;
-    String name,discrip,price,userId ;
-    Book_Details bookDetails;
+    String name,discrip,price;
     //testing github
 
     @Override
@@ -26,6 +24,7 @@ public class Description extends AppCompatActivity {
         bookname = findViewById(R.id.bookname);
         bookdiscription = findViewById(R.id.description);
         bookprice = findViewById(R.id.price);
+        oder = findViewById(R.id.oder);
 
         Intent intent = getIntent();
         Book_Details book = (Book_Details) intent.getSerializableExtra("selectedBook");
