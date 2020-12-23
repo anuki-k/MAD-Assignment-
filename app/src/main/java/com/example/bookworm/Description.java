@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import com.google.firebase.database.DatabaseReference;
 
+import java.util.jar.Attributes;
+
 public class Description extends AppCompatActivity {
 
     TextView bookname,bookdiscription,bookprice;
@@ -29,6 +31,7 @@ public class Description extends AppCompatActivity {
         Intent intent = getIntent();
         Book_Details book = (Book_Details) intent.getSerializableExtra("selectedBook");
         name = book.getName();
+        System.out.println("name is"+ name);
         bookname.setText(name);
         discrip = book.getDescription();
         bookdiscription.setText(discrip);

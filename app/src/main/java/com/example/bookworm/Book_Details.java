@@ -10,6 +10,12 @@ public class Book_Details implements Serializable {
     public Book_Details() {
     }
 
+    public Book_Details(String name, String description, String price) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
+    }
+
     public String getName() {
         return name;
     }

@@ -1,4 +1,4 @@
-package com.example.bookworm;
+ package com.example.bookworm;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -44,8 +45,12 @@ public class MainActivity extends AppCompatActivity {
             {
                 String name = ds.child("bname").getValue().toString();
                 bnames.add(name);
+                String decription = ds.child("bdiscrip").getValue().toString();
+                String price = ds.child("bprice").getValue().toString();
 
-                Book_Details booklist = ds.getValue(Book_Details.class);
+
+                Book_Details booklist = new Book_Details(name,decription,price);
+                System.out.println("bookname is"+booklist.getName());
                 bookArray.add(booklist);
             }
                 adapter=new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1,bnames);
@@ -57,6 +62,9 @@ public class MainActivity extends AppCompatActivity {
                         String selectedItem = (String) parent.getItemAtPosition(position);
                         Intent nextIntent = new Intent(MainActivity.this,Description.class);
                         for (Book_Details bookDetails : bookArray){
+                            System.out.println("lenght of bookArray"+bookArray.size());
+                            Log.d("X",bookDetails.getName());
+
                             if (bookDetails.getName().equals(selectedItem)){
                                 nextIntent.putExtra("selectedBook",bookDetails);
                                 break;
