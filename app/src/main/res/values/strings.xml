@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">BW</string>
+    <string name="web_client_id">web_client</string>
+    <string name="name">name</string>
+    <string name="logout">Logout</string>
+    <string name="id">id</string>
+    <string name="email">email</string>
+    <string name="book_worm">Book Worm</string>
+    <string name="sign_in_as_a_customer">customer</string>
+    <string name="password">password</string>
+    <string name="login">login</string>
+</resources>
